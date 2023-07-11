@@ -4,6 +4,7 @@ A progressive anagram generator for mentalism in C.
 
 ## Usage:
 
+'''
 ./prog_ang jacob lizzy damien superman ironman cass dean sam
 
 
@@ -24,6 +25,6 @@ A progressive anagram generator for mentalism in C.
                                                   5 -----> final result: damien
 
 You would ask at most 5 questions
-
+'''
 
 ### If not input is supplied, it will give an example
