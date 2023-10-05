@@ -5,7 +5,7 @@
 #define MAX 1000
 #define MAX_DEPTH 100
 
-MAX_DEPTH_REACHED = 0;
+int MAX_DEPTH_REACHED = 0;
 
 struct letter_counter {
 	char letter;
@@ -23,7 +23,7 @@ struct Tree {
 struct Tree* create(void) {
   struct Tree* newNode = malloc(sizeof(struct Tree));
   newNode->data[0]= NULL;
-  newNode->split_on = NULL;
+  newNode->split_on = '\0';
   newNode->data_count = 0;
   newNode->left = NULL;
   newNode->right = NULL;
@@ -39,7 +39,7 @@ void printTree(struct Tree* node, int level) {
 	for (int i = 0;i<level;i++) {
 		printf("          ");
 	}
-	if (node->split_on != NULL) {
+	if (node->split_on != '\0') {
 		printf("%d -----> words: [",level);
 		for (int j = 0;j<node->data_count;j++) {
 			if (j == node->data_count-1) {
